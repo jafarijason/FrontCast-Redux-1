@@ -7,6 +7,8 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
     this.state = {
       count: 0
     }
