@@ -22,3 +22,5 @@ const render = () => ReactDOM.render(
   , rootElement)
 
   render()
+
+  store.subscribe(render)
