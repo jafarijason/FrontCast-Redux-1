@@ -15,9 +15,21 @@ class App extends React.Component {
   }
 
   increment() {
+    this.setState((prevstate) => {
+      const nextState = {
+        count: prevstate.count + 1
+      }
+      return nextState
+    })
     console.log("Incremant");
   }
   decrement() {
+    this.setState((prevstate) => {
+      const nextState = {
+        count: prevstate.count - 1
+      }
+      return nextState
+    })
     console.log("decrement")
   }
 
@@ -26,7 +38,7 @@ class App extends React.Component {
       <div>
         <h2>Count: {this.state.count}</h2>
         <button onClick={this.decrement}>Decrement</button>
-        <button  onClick={this.increment}>Increment</button>
+        <button onClick={this.increment}>Increment</button>
       </div>
     )
   }
